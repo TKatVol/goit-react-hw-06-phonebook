@@ -25,10 +25,10 @@ const reducers = combineReducers({
   filter: filterReducer,
 });
 
-const persistedContactsReducer = persistReducer(persistConfig, reducers);
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
-  reducer: persistedContactsReducer, 
+  reducer: persistedReducer, 
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
